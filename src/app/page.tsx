@@ -1,113 +1,387 @@
-import Image from 'next/image'
-
+"use client"
 export default function Home() {
+
+  const toggleMenu = () => {
+    const menu = document.querySelector(".menu-links");
+    const icon = document.querySelector(".hamburger-icon");
+    menu?.classList.toggle("open");
+    icon?.classList.toggle("open");
+  }
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <nav id="desktop-nav" className="h-20">
+        <div className="logo">Huala</div>
+        <div>
+          <ul className="nav-links">
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#experience">经验</a></li>
+            <li><a href="#projects">项目</a></li>
+            <li><a href="#contact">联系我</a></li>
+          </ul>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      </nav>
+      <nav id="hamburger-nav">
+        <div className="logo">John Doe</div>
+        <div className="hamburger-menu">
+          <div className="hamburger-icon" onClick={() => toggleMenu()}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div className="menu-links">
+            <li><a href="#关于我" onClick={() => toggleMenu()}>About</a></li>
+            <li><a href="#经验" onClick={() => toggleMenu()}>Experience</a></li>
+            <li><a href="#项目" onClick={() => toggleMenu()}>Projects</a></li>
+            <li><a href="#联系我" onClick={() => toggleMenu()}>Contact</a></li>
+          </div>
+        </div>
+      </nav>
+      <section id="profile">
+        <div className="section__pic-container">
+          <img src="/assets/profile-pic.jpg" className="rounded-full h-96 w-96" alt="John Doe profile picture" />
+        </div>
+        <div className="section__text">
+          <p className="section__text__p1">Hello, I'm</p>
+          <h1 className="title">Huala</h1>
+          <p className="section__text__p2">Full Stack Developer</p>
+          <div className="btn-container">
+            <button
+              className="btn btn-color-2"
+              onClick={() => window.open('/assets/resume-example.pdf')}
+            >
+              Download CV
+            </button>
+            <button className="btn btn-color-1" onClick={() => location.href = './#contact'}>
+              联系信息
+            </button>
+          </div>
+          <div id="socials-container">
+            <img
+              src="/assets/linkedin.png"
+              alt="My LinkedIn profile"
+              className="icon"
+              onClick={() => location.href = 'https://linkedin.com/'}
+            />
+            <img
+              src="/assets/github.png"
+              alt="My Github profile"
+              className="icon"
+              onClick={() => location.href = 'https://github.com/'}
+            />
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <p className="section__text__p1">About Me</p>
+        <h1 className="title">关于我</h1>
+        <div className="section-container">
+          <div className="section__pic-container">
+            <img
+              src="/assets/about-pic.png"
+              alt="Profile picture"
+              className="about-pic"
+            />
+          </div>
+          <div className="about-details-container">
+            <div className="about-containers">
+              <div className="details-container">
+                <img
+                  src="/assets/experience.png"
+                  alt="Experience icon"
+                  className="icon"
+                />
+                <h3>Experience</h3>
+                <p>2+ years <br />Frontend Development</p>
+              </div>
+              <div className="details-container">
+                <img
+                  src="/assets/education.png"
+                  alt="Education icon"
+                  className="icon"
+                />
+                <h3>Education</h3>
+                <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+              </div>
+            </div>
+            <div className="text-container">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
+                reprehenderit et laborum, rem, dolore eum quod voluptate
+                exercitationem nobis, nihil esse debitis maxime facere minus sint
+                delectus velit in eos quo officiis explicabo deleniti dignissimos.
+                Eligendi illum libero dolorum cum laboriosam corrupti quidem,
+                reiciendis ea magnam? Nulla, impedit fuga!
+              </p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="/assets/arrow.png"
+          alt="Arrow icon"
+          className="icon arrow"
+          onClick={() => location.href = './#experience'}
         />
-      </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      <section id="experience">
+        <p className="section__text__p1">Experience</p>
+        <h1 className="title">经验</h1>
+        <div className="experience-details-container">
+          <div className="about-containers">
+            <div className="details-container">
+              <h2 className="experience-sub-title">Frontend Development</h2>
+              <div className="article-container">
+                <article>
+                  <img
+                    src="/assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>HTML</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="/assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>CSS</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="/assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>SASS</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="/assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>JavaScript</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="/assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>TypeScript</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="/assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>Material UI</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div className="details-container">
+              <h2 className="experience-sub-title">Frontend Development</h2>
+              <div className="article-container">
+                <article>
+                  <img
+                    src="/assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>PostgreSQL</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="/assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>Node JS</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="/assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>Express JS</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="/assets/checkmark.png"
+                    alt="Experience icon"
+                    className="icon"
+                  />
+                  <div>
+                    <h3>Git</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="/assets/arrow.png"
+          alt="Arrow icon"
+          className="icon arrow"
+          onClick={() => location.href = './#projects'}
+        />
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <section id="projects">
+        <p className="section__text__p1">Projects</p>
+        <h1 className="title">项目</h1>
+        <div className="experience-details-container">
+          <div className="about-containers">
+            <div className="details-container color-container">
+              <div className="article-container">
+                <img
+                  src="/assets/project-1.png"
+                  alt="Project 1"
+                  className="project-img"
+                />
+              </div>
+              <h2 className="experience-sub-title project-title">Project One</h2>
+              <div className="btn-container">
+                <button
+                  className="btn btn-color-2 project-btn"
+                  onClick={() => location.href = 'https://github.com/'}
+                >
+                  Github
+                </button>
+                <button
+                  className="btn btn-color-2 project-btn"
+                  onClick={() => location.href = 'https://github.com/'}
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+            <div className="details-container color-container">
+              <div className="article-container">
+                <img
+                  src="/assets/project-2.png"
+                  alt="Project 2"
+                  className="project-img"
+                />
+              </div>
+              <h2 className="experience-sub-title project-title">Project Two</h2>
+              <div className="btn-container">
+                <button
+                  className="btn btn-color-2 project-btn"
+                  onClick={() => location.href = 'https://github.com/'}
+                >
+                  Github
+                </button>
+                <button
+                  className="btn btn-color-2 project-btn"
+                  onClick={() => location.href = 'https://github.com/'}
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+            <div className="details-container color-container">
+              <div className="article-container">
+                <img
+                  src="/assets/project-3.png"
+                  alt="Project 3"
+                  className="project-img"
+                />
+              </div>
+              <h2 className="experience-sub-title project-title">Project Three</h2>
+              <div className="btn-container">
+                <button
+                  className="btn btn-color-2 project-btn"
+                  onClick={() => location.href = 'https://github.com/'}
+                >
+                  Github
+                </button>
+                <button
+                  className="btn btn-color-2 project-btn"
+                  onClick={() => location.href = 'https://github.com/'}
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="/assets/arrow.png"
+          alt="Arrow icon"
+          className="icon arrow"
+          onClick={() => location.href = './#contact'}
+        />
+      </section>
+      <section id="contact">
+        <p className="section__text__p1">Contact Me</p>
+        <h1 className="title">联系我</h1>
+        <div className="contact-info-upper-container">
+          <div className="contact-info-container">
+            <img
+              src="/assets/email.png"
+              alt="Email icon"
+              className="icon contact-icon email-icon"
+            />
+            <p><a href="mailto:examplemail@gmail.com">hualafun@foxmail.com</a></p>
+          </div>
+          <div className="contact-info-container">
+            <img
+              src="/assets/linkedin.png"
+              alt="LinkedIn icon"
+              className="icon contact-icon"
+            />
+            <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <nav>
+          <div className="nav-links-container">
+            <ul className="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
+      </footer>
+    </>
   )
 }
