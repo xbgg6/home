@@ -1,5 +1,6 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/button"
+import { QqOutlined, GithubOutlined, WechatFilled } from "@ant-design/icons"
+
 const Profile = () => {
   return (
     <section id="profile" className="flex flex-col gap-4 justify-center text-center items-center min-h-screen">
@@ -12,20 +13,9 @@ const Profile = () => {
       </div>
       {/* 社交链接 */}
       <div className="flex gap-4 justify-center">
-        <Image
-          width={800} height={400}
-          src="/assets/qq.png"
-          alt="My LinkedIn profile"
-          className="h-8 w-16 cursor-pointer"
-          onClick={() => window.open('https://qm.qq.com/q/l4FrAsizqU')}
-        />
-        <Image
-          width={400} height={400}
-          src="/assets/github.png"
-          alt="My Github profile"
-          className="h-8 w-8 cursor-pointer"
-          onClick={() => window.open('https://github.com/')}
-        />
+        <QqOutlined className="text-4xl cursor-pointer hover:scale-125" onClick={() => window.open('https://qm.qq.com/q/l4FrAsizqU')} />
+        <WechatFilled className="text-4xl cursor-pointer hover:scale-125" onClick={() => window.open('https://qm.qq.com/q/l4FrAsizqU')} />
+        <GithubOutlined className="text-4xl cursor-pointer hover:scale-125" onClick={() => window.open('https://github.com/hualafun')} />
       </div>
     </section>
   )
