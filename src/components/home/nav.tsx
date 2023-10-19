@@ -2,23 +2,23 @@ import toggleMenu from "@/lib/toggle-menu"
 
 const menus = [
   {
-    title: "About",
+    title: "关于",
     href: "#about",
   },
   {
-    title: "Experience",
+    title: "技能",
     href: "#experience",
   },
   {
-    title: "Projects",
+    title: "项目",
     href: "#projects",
   },
   {
-    title: "Contact",
+    title: "联系我",
     href: "#contact",
   },
   {
-    title: "Web Status",
+    title: "网站心电图",
     target: '_blank',
     href: "https://status.huala.fun",
   },
@@ -34,7 +34,7 @@ const Nav = () => {
           <ul className="nav-links flex gap-8">
             {
               menus.map((menu) => (
-                <li key={menu.href}><a href={menu.href} target={menu?.target}>{menu.title}</a></li>
+                <li key={menu.href} className="hover:decoration-slate-500	 hover:underline hover:underline-offset-8"><a href={menu.href} target={menu?.target}>{menu.title}</a></li>
               ))
             }
           </ul>
