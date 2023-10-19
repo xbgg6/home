@@ -4,19 +4,10 @@ const About = () => {
     <section id="about" className="flex flex-col justify-center text-center min-h-screen py-16">
       <div>
         <p className="text-md">Get To Know More</p>
-        <h1 className="text-5xl mt-4 font-bold">About Me</h1>
+        <h1 className="text-3xl tracking-widest mt-4 font-bold">关于我</h1>
       </div>
       
       <div className="flex-1 flex justify-between">
-        <div className="section__pic-container">
-          <Image
-            width={400}
-            height={400}
-            src="/assets/about-pic.png"
-            alt="Profile picture"
-            className="about-pic"
-          />
-        </div>
         <div className="about-details-container">
           <div className="about-containers">
             <div className="details-container">

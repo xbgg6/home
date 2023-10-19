@@ -5,7 +5,7 @@ const Contact = () => {
     <section id="contact">
       <p className="section__text__p1">Contact Me</p>
       <h1 className="title">联系我</h1>
-      <div className="contact-info-upper-container">
+      <div className="flex">
         <div className="contact-info-container">
           <Image width={400} height={400}
             src="/assets/email.png"
