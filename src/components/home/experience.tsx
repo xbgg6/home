@@ -18,18 +18,7 @@ const frontend = [
   'Next.js',
   'Ant Design',
   'TypeScript',
-  'Node.js',
-  'Express',
-  'MongoDB',
-  'MySQL',
-  'Git',
-  'GitHub',
   'Vercel',
-  'Docker',
-  'Nginx',
-  'PostgreSQL',
-  'Redis',
-  'MySQL',
 ]
 
 
@@ -42,8 +31,16 @@ const backend = [
   'PostgreSQL',
   'Redis',
   'MySQL',
+  'JAVA',
+  'Spring Boot',
+  'Spring Cloud',
 ]
 
+const others = [
+  'Git',
+  'Postman',
+  'ApiPost'
+]
 
 
 const Experience = () => {
@@ -63,9 +60,9 @@ const Experience = () => {
             <CardContent>
               <div className="flex flex-wrap gap-2">
                 {
-                  backend.map((item) => {
+                  backend.map((item,index) => {
                     return (
-                      <div key={`frontend-${item}`} className="flex items-center gap-2">
+                      <div key={`backend-${index}`} className="flex items-center gap-2">
                         <TagsTwoTone />
                         <span>{item}</span>
                       </div>
@@ -83,9 +80,9 @@ const Experience = () => {
             <CardContent>
               <div className="flex flex-wrap gap-2">
                 {
-                  frontend.map((item) => {
+                  frontend.map((item,index) => {
                     return (
-                      <div key={`frontend-${item}`} className="flex items-center gap-2">
+                      <div key={`frontend-${index}`} className="flex items-center gap-2">
                         <TagsTwoTone />
                         <span>{item}</span>
                       </div>
@@ -103,9 +100,9 @@ const Experience = () => {
           <CardContent>
             <div className="flex flex-wrap gap-2">
               {
-                backend.map((item) => {
+                others.map((item,index) => {
                   return (
-                    <div key={`frontend-${item}`} className="flex items-center gap-2">
+                    <div key={`others-${index}`} className="flex items-center gap-2">
                       <TagsTwoTone />
                       <span>{item}</span>
                     </div>

@@ -14,7 +14,7 @@ const Profile = () => {
         <p className="text-md text-slate-500 font-semibold">练习时长两年半（经验）</p>
         <div className="flex gap-4 justify-center" >
           <Button variant="secondary" onClick={() => window.open('/assets/resume-example.pdf')}> 简历下载</Button>
-          <Button variant="secondary" onClick={() => location.href = './#contact'}> 联系信息 </Button>
+          <Button variant="secondary" > 联系信息 </Button>
         </div>
         {/* 社交链接 */}
         <div className="flex gap-4 justify-center">
