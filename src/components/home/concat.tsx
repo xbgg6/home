@@ -2,9 +2,11 @@ import Image from "next/image"
 
 const Contact = () => {
   return (
-    <section id="contact">
-      <p className="section__text__p1">Contact Me</p>
-      <h1 className="title">联系我</h1>
+    <section id="contact" className="flex flex-col justify-center text-center min-h-screen py-16">
+      <div>
+        <p className="text-md">Contact Me</p>
+        <h1 className="text-3xl tracking-widest mt-4 font-bold">联系我</h1>
+      </div>
       <div className="flex">
         <div className="contact-info-container">
           <Image width={400} height={400}

@@ -7,11 +7,10 @@ import home from "@/components/home"
 export default function Home() {
 
   return (
-    <div className="container px-32 flex flex-col min-h-screen pt-4">
+    <div className="container min-h-screen flex flex-col pt-4 lg:px-32">
       <home.Nav />
       <home.Profile />
-      <home.About />
-      <home.Experience />
+      <home.Skill />
       <home.Projects />
       <home.Contact />
       <home.Footer />
