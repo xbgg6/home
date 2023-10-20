@@ -17,7 +17,7 @@ import {
 
 const menus = [
   {
-    title: "技能",
+    title: "经验",
     href: "#skill",
   },
   {

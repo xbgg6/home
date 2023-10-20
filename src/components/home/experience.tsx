@@ -45,7 +45,7 @@ const others = [
 
 const Experience = () => {
   return (
-    <section id="skill" className="flex flex-col justify-content: start; text-center min-h-screen py-16">
+    <section id="experience" className="flex flex-col justify-content: start; text-center min-h-screen py-16">
       <div>
         <p className="text-md">Experience</p>
         <h1 className="text-3xl tracking-widest mt-4 font-bold">经验</h1>
