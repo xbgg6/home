@@ -1,8 +1,29 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import { QqOutlined, GithubOutlined, WechatFilled,MailOutlined } from "@ant-design/icons"
+import { QqOutlined, GithubOutlined, WechatFilled, MailOutlined } from "@ant-design/icons"
+import HoverPopover from "../ui/hover-popover"
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card"
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 const Profile = () => {
+
+
+
+  const openUrl = (url: string) => {
+    window.open(url, '_blank')
+  }
+
+
   return (
     <section id="profile" className="flex gap-8  justify-center text-center items-center min-h-screen max-lg:flex-col">
       <Image src={"/assets/profile.jpg"} width={350} height={350} alt="Profile picture"
@@ -13,14 +34,50 @@ const Profile = () => {
         <p className="text-xl text-slate-500 font-semibold">一个全栈开发者（新时代农民工）</p>
         <p className="text-md text-slate-500 font-semibold">练习时长两年半（经验）</p>
         <div className="flex gap-4 justify-center" >
-          <Button variant="secondary" onClick={() => window.open('/assets/resume-example.pdf')}> 简历下载</Button>
-          <Button variant="secondary" > 联系信息 </Button>
+          <Button variant="secondary" onClick={() => openUrl('/assets/resume-example.pdf')}> 简历下载</Button>
         </div>
         {/* 社交链接 */}
         <div className="flex gap-4 justify-center">
-          <MailOutlined className="text-2xl cursor-pointer hover:scale-125"/>
-          <QqOutlined className="text-2xl cursor-pointer hover:scale-125" onClick={() => window.open('https://qm.qq.com/q/l4FrAsizqU')} />
-          <WechatFilled className="text-2xl cursor-pointer hover:scale-125" onClick={() => window.open('https://qm.qq.com/q/l4FrAsizqU')} />
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <MailOutlined className="text-2xl cursor-pointer hover:scale-125" />
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>hualafun@qq.com</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+
+          <HoverCard>
+            <HoverCardTrigger asChild>
+              <WechatFilled onClick={() => openUrl('/assets/wechat.jpg')} className="text-2xl cursor-pointer hover:scale-125" />
+            </HoverCardTrigger>
+            <HoverCardContent className="w-48">
+              <div className="flex gap-4 flex-col justify-center items-center">
+                <Image src={"/assets/wechat.jpg"} width={350} height={350} className="h-32 w-32" alt="微信号:he-wen-yao" />
+                <p className="text-sm">
+                  微信号:he-wen-yao
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCard>
+
+          <HoverCard>
+            <HoverCardTrigger asChild>
+              <QqOutlined className="text-2xl cursor-pointer hover:scale-125" onClick={() => window.open('https://qm.qq.com/q/l4FrAsizqU')} />
+            </HoverCardTrigger>
+            <HoverCardContent className="w-48">
+              <div className="flex gap-4 flex-col justify-center items-center">
+                <Image src={"/assets/qq.jpg"} width={350} height={350} className="h-32 w-32" alt="QQ号:205441376" />
+                <p className="text-sm">
+                  QQ号:205441376
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCard>
+
+
           <GithubOutlined className="text-2xl cursor-pointer hover:scale-125" onClick={() => window.open('https://github.com/hualafun')} />
         </div>
       </div>
