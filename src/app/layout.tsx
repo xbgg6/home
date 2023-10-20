@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
-
+import { ThemeProvider } from "@/components/theme-provider"
 import './globals.css'
 
 const poppins = Poppins({
-  weight: ['300','400','500', '600'],
+  weight: ['300', '400', '500', '600'],
   subsets: ['latin'],
   display: 'swap'
 })
@@ -21,7 +21,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >{children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }

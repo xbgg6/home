@@ -4,14 +4,13 @@ import Image from "next/image"
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
-  CardTitle,
   CardFooter
 } from "@/components/ui/card"
 
 import { Button } from "@/components/ui/button"
 
+import { EnterIcon } from '@radix-ui/react-icons'
 
 const projects = [
   {
@@ -64,34 +63,35 @@ const Projects = () => {
         {
           projects.map(item => {
             return (
-              <Card key={item.name} className="w-full max-lg:w-full ">
-                <CardHeader>
-                </CardHeader>
-                <CardContent>
+              <Card key={item.name} className="w-full max-lg:w-full">
+                <CardContent className="p-0">
                   <div className="flex justify-center items-center w-full flex-col text-center">
                     <Image width={400} height={400}
                       src={item.cover}
                       alt="Project 2"
-                      className="project-img"
+                      className="project-img rounded-md"
                     />
-                    <span className="text-3xl mt-4">{item.name}</span>
-                    <p className="text-inherit text-sm">
-                      {item.description}
-                    </p>
+                    <div className="flex flex-col gap-2">
+                      <span className="text-2xl mt-4">{item.name}</span>
+                      <p className="text-inherit text-sm">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
                 </CardContent>
-                <CardFooter>
+                <CardFooter className="pb-2">
                   <div className="flex gap-4 justify-center w-full">
                     <Button
-                      variant="outline"
+                      variant="link"
                       onClick={() => window.open(item.codePath)}
                     >
                       源码地址
                     </Button>
                     <Button
+                      variant="link"
                       onClick={() => window.open(item.link)}
                     >
-                      项目地址
+                      项目地址 <EnterIcon className="ml-2" />
                     </Button>
                   </div>
                 </CardFooter>
