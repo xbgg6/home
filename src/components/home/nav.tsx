@@ -10,10 +10,6 @@ const menus = [
     href: "#projects",
   },
   {
-    title: "联系我",
-    href: "#contact",
-  },
-  {
     title: "网站心电图",
     target: '_blank',
     href: "https://status.huala.fun",

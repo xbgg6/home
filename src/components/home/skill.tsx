@@ -11,7 +11,7 @@ import {
 
 const Skill = () => {
   return (
-    <section id="skill" className="flex flex-col justify-center text-center min-h-screen py-16">
+    <section id="skill" className="flex flex-col justify-content: start; text-center min-h-screen py-16">
       <div>
         <p className="text-md">Skill Detail</p>
         <h1 className="text-3xl tracking-widest mt-4 font-bold">技能</h1>

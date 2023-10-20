@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import { QqOutlined, GithubOutlined, WechatFilled } from "@ant-design/icons"
+import { QqOutlined, GithubOutlined, WechatFilled,MailOutlined } from "@ant-design/icons"
 
 const Profile = () => {
   return (
@@ -18,6 +18,7 @@ const Profile = () => {
         </div>
         {/* 社交链接 */}
         <div className="flex gap-4 justify-center">
+          <MailOutlined className="text-2xl cursor-pointer hover:scale-125"/>
           <QqOutlined className="text-2xl cursor-pointer hover:scale-125" onClick={() => window.open('https://qm.qq.com/q/l4FrAsizqU')} />
           <WechatFilled className="text-2xl cursor-pointer hover:scale-125" onClick={() => window.open('https://qm.qq.com/q/l4FrAsizqU')} />
           <GithubOutlined className="text-2xl cursor-pointer hover:scale-125" onClick={() => window.open('https://github.com/hualafun')} />

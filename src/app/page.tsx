@@ -12,7 +12,6 @@ export default function Home() {
       <home.Profile />
       <home.Skill />
       <home.Projects />
-      <home.Contact />
       <home.Footer />
     </div>
   )

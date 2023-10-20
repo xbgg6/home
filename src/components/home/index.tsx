@@ -3,7 +3,6 @@ import Nav from "./nav";
 import Profile from "./profile";
 
 import Projects from "./projects";
-import Contact from "./concat";
 
 import Footer from "./footer";
 
@@ -12,7 +11,6 @@ const home = {
   Skill,
   Profile,
   Projects,
-  Contact,
   Footer
 }
 
