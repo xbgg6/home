@@ -10,7 +10,7 @@ export default function Home() {
     <div className="container min-h-screen flex flex-col pt-4 lg:px-32">
       <home.Nav />
       <home.Profile />
-      <home.Skill />
+      <home.Experience />
       <home.Projects />
       <home.Footer />
     </div>

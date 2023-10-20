@@ -1,4 +1,4 @@
-import Skill from "./skill";
+import Experience from "./experience";
 import Nav from "./nav";
 import Profile from "./profile";
 
@@ -8,7 +8,7 @@ import Footer from "./footer";
 
 const home = {
   Nav,
-  Skill,
+  Experience,
   Profile,
   Projects,
   Footer

@@ -83,13 +83,12 @@ const Projects = () => {
                 <CardFooter>
                   <div className="flex gap-4 justify-center w-full">
                     <Button
-                      className="btn btn-color-2 project-btn"
+                      variant="outline"
                       onClick={() => window.open(item.codePath)}
                     >
                       源码地址
                     </Button>
                     <Button
-                      className="btn btn-color-2 project-btn"
                       onClick={() => window.open(item.link)}
                     >
                       项目地址
