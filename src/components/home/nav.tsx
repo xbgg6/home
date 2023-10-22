@@ -25,6 +25,11 @@ const menus = [
     href: "#projects",
   },
   {
+    title: "博客",
+    target: '_blank',
+    href: "https://blog.huala.fun",
+  },
+  {
     title: "网站心电图",
     target: '_blank',
     href: "https://status.huala.fun",
