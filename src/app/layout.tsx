@@ -1,35 +1,35 @@
-import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
-import { ThemeProvider } from "@/components/theme-provider"
-import './globals.css'
+import type { Metadata } from "next";
+import { Poppins } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import "./globals.css";
 
 const poppins = Poppins({
-  weight: ['300', '400', '500', '600'],
-  subsets: ['latin'],
-  display: 'swap'
-})
+  weight: ["300", "400", "500", "600"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: 'Huala 的个人主页',
-  description: '个人主页'
-}
+  title: "Huala 的个人主页",
+  description: "个人主页",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="zh">
       <body className={poppins.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
-          disableTransitionOnChange
-        >{children}
+          disableTransitionOnChange>
+          {children}
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

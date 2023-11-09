@@ -1,11 +1,8 @@
-"use client"
+"use client";
 
-import home from "@/components/home"
-
-
+import home from "@/components/home";
 
 export default function Home() {
-
   return (
     <div className="container min-h-screen flex flex-col pt-4 lg:px-32">
       <home.Nav />
@@ -14,5 +11,5 @@ export default function Home() {
       <home.Projects />
       <home.Footer />
     </div>
-  )
+  );
 }
