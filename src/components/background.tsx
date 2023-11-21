@@ -4,8 +4,6 @@ import { useEffect } from "react";
 const Background = () => {
   const handleMouseMove = (e: any) => {
     console.log(document.body.clientHeight, document.body.clientWidth);
-    console.log(e);
-
     document.body.style.setProperty("--x", e.clientX + "px");
     document.body.style.setProperty("--y", e.clientY + "px");
   };
