@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
+import "@/styles/reset.css";
 import Background from "@/components/background";
+import { ScrollProgress } from "@/components/progress";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600"],
@@ -30,6 +32,7 @@ export default function RootLayout({
           disableTransitionOnChange>
           <main>{children}</main>
           <Background />
+          <ScrollProgress />
         </ThemeProvider>
       </body>
     </html>

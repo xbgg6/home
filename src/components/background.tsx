@@ -1,7 +1,11 @@
-"use client"
+"use client";
 import { useEffect } from "react";
+
 const Background = () => {
   const handleMouseMove = (e: any) => {
+    console.log(document.body.clientHeight, document.body.clientWidth);
+    console.log(e);
+
     document.body.style.setProperty("--x", e.clientX + "px");
     document.body.style.setProperty("--y", e.clientY + "px");
   };
@@ -17,7 +21,11 @@ const Background = () => {
     <div className="fixed left-0 top-0 -z-50">
       <div className="sticky left-0 top-0 h-screen w-screen overflow-hidden">
         <div className="bg-muted-foreground/20 absolute inset-0 z-[-1]"></div>
-        <div className="bg-gradient-radial from-muted-foreground/80  absolute left-[--x] top-[--y] z-[-1] h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full from-0% to-transparent to-90% blur-md"></div>
+        <div
+          className="absolute left-[--x] top-[--y] 
+        h-32 w-32 z-[-1]  rounded-full  -translate-x-1/2 -translate-y-1/2 
+        from-0% to-transparent to-90% blur-md 
+        from-muted-foreground  bg-gradient-radial"></div>
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
           <defs>
             <pattern

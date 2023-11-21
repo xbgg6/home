@@ -52,7 +52,7 @@ const Experience = () => {
       </div>
       <div className="mt-8 flex flex-col gap-4">
         <div className="flex justify-between gap-4  max-lg:flex-col">
-          <Card className="flex-1">
+          <Card className="flex-1 shadow-none ">
             <CardHeader>
               <CardTitle>后端开发技术</CardTitle>
               <CardDescription>Backend Development</CardDescription>
@@ -72,7 +72,7 @@ const Experience = () => {
               </div>
             </CardContent>
           </Card>
-          <Card className="flex-1">
+          <Card className="flex-1 shadow-none ">
             <CardHeader>
               <CardTitle>前端开技术</CardTitle>
               <CardDescription>Frontend Development</CardDescription>
@@ -93,7 +93,7 @@ const Experience = () => {
             </CardContent>
           </Card>
         </div>
-        <Card>
+        <Card className="shadow-none ">
           <CardHeader>
             <CardTitle>其他技术</CardTitle>
           </CardHeader>
