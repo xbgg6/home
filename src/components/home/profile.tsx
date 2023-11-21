@@ -30,11 +30,10 @@ const Profile = () => {
         className="rounded-full h-92 w-92 max-lg:h-48 max-lg:w-48" />
       <div className="flex flex-col gap-4 justify-center text-center items-center antialiased hover:subpixel-antialiased">
         <p className="text-md text-slate-500 font-semibold">你好, 我是</p>
-        <h1 className="text-3xl font-bold">Huala（哗啦）站点的开发者</h1>
-        <p className="text-xl text-slate-500 font-semibold">一个全栈开发者（新时代农民工）</p>
-        <p className="text-md text-slate-500 font-semibold">练习时长两年半（经验）</p>
+        <p className="text-xl text-slate-500 font-semibold">一个练习时长两年半（经验）的</p>
+        <p className="text-md text-slate-500 font-semibold">全栈开发者（新时代农民工）</p>
         <div className="flex gap-4 justify-center" >
-          <Button variant="secondary" onClick={() => openUrl('/assets/resume-example.pdf')}> 简历下载</Button>
+          <Button variant="secondary" onClick={() => openUrl('')}> 简历下载</Button>
         </div>
         {/* 社交链接 */}
         <div className="flex gap-4 justify-center">

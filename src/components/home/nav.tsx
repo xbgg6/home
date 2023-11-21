@@ -36,12 +36,12 @@ const menus = [
 
 const NotPcScreen = () => {
   return (
-    <nav id="hamburger-nav" className="flex justify-between text-xl lg:hidden">
+    <nav id="hamburger-nav" className="flex justify-between lg:hidden">
       <div className="logo">Huala</div>
       <div className="flex items-center">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <MenuOutlined className="text-xl cursor-pointer" />
+            <MenuOutlined className="cursor-pointer" />
           </DropdownMenuTrigger>
           <DropdownMenuContent>
             {menus.map((item) => {
