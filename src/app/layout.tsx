@@ -13,7 +13,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Huala 的个人主页",
+  title: "He's Personal homepage",
   description: "个人主页",
 };
 

@@ -13,6 +13,13 @@ import { EnterIcon } from "@radix-ui/react-icons";
 
 const projects = [
   {
+    cover: "/assets/moyu.png",
+    name: "聚合热搜",
+    link: "https://moyu.huala.fun/",
+    codePath: null,
+    description: <>聚合常见网站的热搜</>,
+  },
+  {
     cover: "/assets/project-draw.png",
     name: "画板",
     link: "https://draw.huala.fun",
@@ -26,20 +33,13 @@ const projects = [
     codePath: "https://github.com/hualafun/it-tools",
     description: <>众多实用的的工具箱，全在这里，永久免费使用</>,
   },
-  {
-    cover: "/assets/project-chat.png",
-    name: "潘多拉 ChatGpt",
-    link: "https://chat.huala.fun/auth/login",
-    codePath: "https://github.com/zhile-io/pandora",
-    description: <>对 ChatGpt 网页版进行逆向</>,
-  },
-  {
-    cover: "/assets/project-forum.png",
-    name: "哗啦论坛",
-    link: "https://forum.huala.fun/",
-    codePath: "https://github.com/didalol/next-forum",
-    description: <>基于 Next.js 的哗啦论坛</>,
-  },
+  // {
+  //   cover: "/assets/project-forum.png",
+  //   name: "哗啦论坛",
+  //   link: "https://forum.huala.fun/",
+  //   codePath: "https://github.com/didalol/next-forum",
+  //   description: <>基于 Next.js 的哗啦论坛</>,
+  // },
 ];
 
 const Projects = () => {
@@ -72,13 +72,17 @@ const Projects = () => {
               </CardContent>
               <CardFooter className="pb-2">
                 <div className="flex gap-4 justify-center w-full">
-                  <Button
-                    variant="link"
-                    onClick={() => window.open(item.codePath)}>
-                    源码地址
-                  </Button>
+                  {item.codePath ? (
+                    <Button
+                      variant="link"
+                      onClick={() => window.open(item.codePath)}>
+                      源码地址
+                    </Button>
+                  ) : (
+                    <Button disabled variant="link">暂未开放</Button>
+                  )}
                   <Button variant="link" onClick={() => window.open(item.link)}>
-                    项目地址 <EnterIcon className="ml-2" />
+                    在线访问 <EnterIcon className="ml-2" />
                   </Button>
                 </div>
               </CardFooter>

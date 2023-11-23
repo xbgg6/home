@@ -18,7 +18,6 @@ const frontend = [
   'Next.js',
   'Ant Design',
   'TypeScript',
-  'Vercel',
 ]
 
 
@@ -39,7 +38,8 @@ const backend = [
 const others = [
   'Git',
   'Postman',
-  'ApiPost'
+  'ApiPost',
+  'Docker',
 ]
 
 

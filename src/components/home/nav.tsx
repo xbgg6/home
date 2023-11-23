@@ -15,7 +15,7 @@ import {
 
 const menus = [
   {
-    title: "经验",
+    title: "经验/技能",
     href: "#experience",
   },
   {
@@ -28,7 +28,7 @@ const menus = [
     href: "https://blog.huala.fun",
   },
   {
-    title: "网站心电图",
+    title: "站点监控",
     target: "_blank",
     href: "https://status.huala.fun",
   },
@@ -37,7 +37,7 @@ const menus = [
 const NotPcScreen = () => {
   return (
     <nav id="hamburger-nav" className="flex justify-between lg:hidden">
-      <div className="logo">Huala</div>
+      <div className="logo">He's PH</div>
       <div className="flex items-center">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -90,14 +90,14 @@ const PCScreen = () => {
       id="desktop-nav"
       className="flex justify-between my-4 text-xl max-lg:hidden">
       <div className="logo">
-        <a href="/">Huala</a>
+        <a href="/">He's PH</a>
       </div>
       <div className="flex gap-1 items-center">
         <ul className="nav-links flex gap-4 items-center">
           {menus.map((menu) => (
             <li
               key={menu.href}
-              className="hover:decoration-slate-500	 hover:underline hover:underline-offset-8">
+              className="hover:decoration-slate-500   text-md	 hover:underline hover:underline-offset-8">
               <a href={menu.href} target={menu?.target}>
                 {menu.title}
               </a>
