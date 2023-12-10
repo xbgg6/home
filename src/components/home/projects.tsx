@@ -15,31 +15,19 @@ const projects = [
   {
     cover: "/assets/moyu.png",
     name: "聚合热搜",
-    link: "https://moyu.huala.fun/",
+    link: "#",
     codePath: null,
     description: <>聚合常见网站的热搜</>,
   },
-  {
-    cover: "/assets/project-draw.png",
-    name: "画板",
-    link: "https://draw.huala.fun",
-    codePath: "https://github.com/excalidraw/excalidraw",
-    description: <>基于开源项目部署</>,
-  },
+
   {
     cover: "/assets/project-it-tools.png",
     name: "开发工具箱",
-    link: "https://it-tools.huala.fun",
+    link: "#",
     codePath: "https://github.com/hualafun/it-tools",
     description: <>众多实用的的工具箱，全在这里，永久免费使用</>,
   },
-  // {
-  //   cover: "/assets/project-forum.png",
-  //   name: "哗啦论坛",
-  //   link: "https://forum.huala.fun/",
-  //   codePath: "https://github.com/didalol/next-forum",
-  //   description: <>基于 Next.js 的哗啦论坛</>,
-  // },
+
 ];
 
 const Projects = () => {

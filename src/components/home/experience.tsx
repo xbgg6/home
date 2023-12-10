@@ -12,12 +12,32 @@ import {
 
 
 
-const frontend = [
-  'HTML、CSS、JavaScript',
-  'React',
-  'Next.js',
-  'Ant Design',
-  'TypeScript',
+const yunwei = [
+	'Kubernetes',
+	'OpenShift',
+	'OpenStack',
+	'KVM',
+	'Hyper-V',
+	'Proxmox VE',
+	'Docker',
+	'Podman',
+	'LXC',
+	'Zstack',
+	'LVS',
+	'Keepalived',
+	'Ansible',
+	'Prometheus',
+	'Grafana',
+	'Zabbix',
+	'Elasticsearch',
+	'Ceph',
+	'Apisix',
+	'Nginx',
+	'Apache',
+	'Tomcat',
+	'Caddy',
+	'NFS,,SAMBA,ISCSI,SAN',
+	'ESXI,vCenter,Harbor,Horizon',
 ]
 
 
@@ -25,21 +45,29 @@ const backend = [
   'Node.js',
   'Express',
   'MongoDB',
+  'RabbitMQ',
   'MySQL',
-  'Nginx',
+  'Go',
   'PostgreSQL',
   'Redis',
-  'MySQL',
   'JAVA',
   'Spring Boot',
   'Spring Cloud',
+  'HTML、CSS、JavaScript',
+  'React',
+  'Next.js',
+  'Ant Design',
+   'Vue',
+  'TypeScript',
 ]
 
 const others = [
   'Git',
   'Postman',
   'ApiPost',
-  'Docker',
+  'Burpsuite',
+  'OpenWrt',
+  'Home All in Boom'
 ]
 
 
@@ -54,8 +82,8 @@ const Experience = () => {
         <div className="flex justify-between gap-4  max-lg:flex-col">
           <Card className="flex-1 shadow-none ">
             <CardHeader>
-              <CardTitle>后端开发技术</CardTitle>
-              <CardDescription>Backend Development</CardDescription>
+              <CardTitle>开发</CardTitle>
+              <CardDescription>Development</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-2">
@@ -74,15 +102,15 @@ const Experience = () => {
           </Card>
           <Card className="flex-1 shadow-none ">
             <CardHeader>
-              <CardTitle>前端开技术</CardTitle>
-              <CardDescription>Frontend Development</CardDescription>
+              <CardTitle>运维</CardTitle>
+              <CardDescription>Operation and maintenance </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-2">
                 {
-                  frontend.map((item,index) => {
+                  yunwei.map((item,index) => {
                     return (
-                      <div key={`frontend-${index}`} className="flex items-center gap-2">
+                      <div key={`yunwei-${index}`} className="flex items-center gap-2">
                         <TagsTwoTone />
                         <span>{item}</span>
                       </div>
@@ -95,7 +123,7 @@ const Experience = () => {
         </div>
         <Card className="shadow-none ">
           <CardHeader>
-            <CardTitle>其他技术</CardTitle>
+            <CardTitle>其他</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="flex flex-wrap gap-2">

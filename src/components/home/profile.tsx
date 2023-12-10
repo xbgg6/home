@@ -42,7 +42,7 @@ const Profile = () => {
           一个练习时长两年半（经验）的
         </p>
         <p className="text-md text-slate-500 font-semibold">
-          全栈开发者（新时代农民工）
+          运维工程师（新时代农民工）
         </p>
         <div className="flex gap-4 justify-center">
           <Button variant="secondary" onClick={() => openUrl("")}>
@@ -58,7 +58,7 @@ const Profile = () => {
             </HoverCardTrigger>
             <HoverCardContent className="w-48">
               <div className="flex gap-4 flex-col justify-center items-center">
-                <p className="text-sm">he.wenyao@foxmail.com</p>
+                <p className="text-sm">admin@wanghaoyu.com.cn</p>
               </div>
             </HoverCardContent>
           </HoverCard>
@@ -71,13 +71,13 @@ const Profile = () => {
             </HoverCardTrigger>
             <HoverCardContent className="w-48">
               <div className="flex gap-4 flex-col justify-center items-center">
-                <p className="text-sm">微信号:he-wen-yao</p>
+                <p className="text-sm">WeChat :xxxxxxxx</p>
               </div>
             </HoverCardContent>
           </HoverCard>
           <GithubOutlined
             className="text-2xl cursor-pointer hover:scale-125"
-            onClick={() => window.open("https://github.com/huala-fun")}
+            onClick={() => window.open("https://github.com/xbgg6")}
           />
         </div>
       </div>

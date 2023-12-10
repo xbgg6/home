@@ -25,19 +25,19 @@ const menus = [
   {
     title: "博客",
     target: "_blank",
-    href: "https://blog.huala.fun",
+    href: "https://www.ldoc.cc",
   },
   {
     title: "站点监控",
     target: "_blank",
-    href: "https://status.huala.fun",
+    href: "https://status.ldoc.cc/status/all",
   },
 ];
 
 const NotPcScreen = () => {
   return (
     <nav id="hamburger-nav" className="flex justify-between lg:hidden">
-      <div className="logo">He's PH</div>
+      <div className="logo">Wang's Home Page.</div>
       <div className="flex items-center">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -90,7 +90,7 @@ const PCScreen = () => {
       id="desktop-nav"
       className="flex justify-between my-4 text-xl max-lg:hidden">
       <div className="logo">
-        <a href="/">He's PH</a>
+        <a href="/">Wang's Home Page.</a>
       </div>
       <div className="flex gap-1 items-center">
         <ul className="nav-links flex gap-4 items-center">

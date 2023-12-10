@@ -13,7 +13,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "He's Personal homepage",
+  title: "Wang's Personal homepage",
   description: "个人主页",
 };
 
