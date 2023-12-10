@@ -37,7 +37,8 @@ const menus = [
 const NotPcScreen = () => {
   return (
     <nav id="hamburger-nav" className="flex justify-between lg:hidden">
-      <div className="logo">Wang's Home Page.</div>
+      //<div className="logo">Wang's Home Page.</div>
+	  <div className="logo">Wang&apos;s Home Page.</div>
       <div className="flex items-center">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -78,7 +79,9 @@ const SwitchDarkMode = () => {
       />
       <MoonIcon
         onClick={() => setTheme("light")}
-        className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+        //className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+		className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark\:-rotate-90 dark\:scale-0"
+
       />
     </Button>
   );
