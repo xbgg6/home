@@ -14,17 +14,17 @@ import { EnterIcon } from "@radix-ui/react-icons";
 const projects = [
   {
     cover: "/assets/moyu.png",
-    name: "聚合热搜",
+    name: "在线摸鱼",
     link: "#",
     codePath: null,
-    description: <>聚合常见网站的热搜</>,
+    description: <>上班摸鱼的好东西~</>,
   },
 
   {
     cover: "/assets/project-it-tools.png",
-    name: "开发工具箱",
+    name: "运维工具箱",
     link: "#",
-    codePath: "https://github.com/hualafun/it-tools",
+    codePath: "#",
     description: <>众多实用的的工具箱，全在这里，永久免费使用</>,
   },
 
@@ -49,7 +49,7 @@ const Projects = () => {
                     width={400}
                     height={400}
                     src={item.cover}
-                    alt="Project 2"
+                    alt="Project"
                     className="rounded-md"
                   />
                   <div className="flex flex-col gap-2">
